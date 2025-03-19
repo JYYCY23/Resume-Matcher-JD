@@ -127,6 +127,7 @@ if resumes and job_description and st.button("🚀 Start Matching"):
             st.markdown("### 📥 Download Results")
             csv_data = create_downloadable_data(
                 [(i+1, res['Document'], res['Match Score']) for i, res in enumerate(sorted_results)]
+            )
             
             st.download_button(
                 label="Export as CSV",
